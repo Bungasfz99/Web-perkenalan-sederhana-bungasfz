@@ -1,0 +1,578 @@
+/* General Body Styles */
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  background-color: #edb7b7;
+  padding: 10px 40px;
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .header {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #333;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  margin-left: 800px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #202020;
+  trSnsition: color 0.3s ease;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+}
+.btn-logout {
+  margin-left: auto; /* KUNCI UTAMA: mendorong tombol otomatis ke paling kanan */
+  
+  /* --- Di bawah ini sisa style tombol kamu (bisa disesuaikan) --- */
+  background-color: #ff4d4d;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-logout:active {
+  transform: scale(0.95);
+}
+
+/* Theme Switcher */
+.theme-switcher {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+body.dark-mode .theme-switcher {
+  background-color: #555;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+main h1 {
+  color: #333;
+  text-align: center;
+  border-bottom: none;
+  font-size: 3em;
+}
+
+body.dark-mode main h1 {
+  color: #eee;
+}
+
+.main-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin-top: -10px;
+}
+
+body.dark-mode .subtitle {
+  color: #aaa;
+}
+
+/* Post List */
+.post-list .post-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+body.dark-mode .post-list .post-item {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.post-list .post-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-list .post-item h2 a {
+  color: #1a1a1a;
+  font-size: 1.5em;
+}
+
+body.dark-mode .post-list .post-item h2 a {
+  color: #eee;
+}
+
+.post-list .post-item p {
+  color: #666;
+}
+
+body.dark-mode .post-list .post-item p {
+  color: #aaa;
+}
+
+/* Post Detail */
+.post-detail {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+body.dark-mode .post-detail {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.post-detail .meta {
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+body.dark-mode .post-detail .meta {
+  color: #aaa;
+}
+
+.post-detail .content {
+  margin-top: 20px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* BOX SECTION */
+.who-box {
+  width: 100%;;
+  max-width: 700px;
+  margin: 10px auto;
+  padding: 25px;
+
+  background-color: #ffffff;
+  border: 2px solid #fcdfdf;
+
+  border-radius: 25px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: 0.3s ease;
+}
+.who-box h2 {
+  font-size: 20px;
+  margin-bottom: -10px;
+  margin-top: -20px;
+
+}
+.who-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: -20px;
+  text-align: justify;
+}
+.box-container {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.line-box {
+  width: 50px;
+  height: 2px;
+  background-color: #4b4b4b;
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+}
+.icon-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #edb7b7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.who-box .icon-circle {
+  transform: scale(1.2);
+}
+.who-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+.footer {
+  background-color: #f8f9fa; /* Warna cerah untuk footer */
+  color: #333; /* Warna teks gelap */
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: auto;
+  border-top: 1px solid #ddd;
+}
+
+body.dark-mode .footer {
+  background-color: #1f1f1f;
+  color: #eee;
+  border-top: 1px solid #333;
+}
+
+/* Hero Section */
+.image-slider {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-left, 
+  .hero-right {
+    width: 100%;
+  }
+}
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px 80px;
+  gap: 60px;
+}
+.hero-left {
+  flex: 1;
+  width: 800px;
+}
+
+.hero-left h1 {
+  font-weight: bold;
+}
+
+.hero-left p {
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 300px;
+}
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -410px;
+  padding-left: 300px;
+  gap:35px; /* jarak antara foto besar dan foto kecil */
+
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero-left button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  background: rgb(10, 102, 194);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+
+}
+ /* Swiper Styles */
+.mySwiper {
+  width: 350px;
+  height: 350px;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper {
+  width: 350px;
+  height: 450px;
+}
+
+/* PHOTO CONTAINER */
+.photo-container {
+  width: 230px;
+  height: 480px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #ffd6e7;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-top: -100px;
+}
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FOTO BESAR */
+.foto-besar {
+  width: 500px;
+  height: 700px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+/* WRAPPER FOTO KECIL */
+.foto-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* FOTO KECIL */ 
+.foto-kecil {
+  width: 140px;
+  height: 200px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+}
+.photo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Pembungkus Utama Layar (Membuat Kartu Pas di Tengah-Tengah Monitor) */
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* Kotak Kartu Login Utama */
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(229, 188, 188, 0.15);
+  padding: 32px;
+  border: 1px solid #f5eded;
+  position: relative;
+  z-index: 10;
+}
+
+/* Struktur Form Di Dalamnya */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* KUNCI UTAMA: Kotak Input Gabungan (Label & Input di dalam 1 Box) */
+.input-group-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: #fffafa;
+  border: 1px solid #f0e6e6;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+/* Efek Bingkai Menyala Saat Diklik */
+.input-group-box:focus-within {
+  border-color: #e5bcbc;
+  box-shadow: 0 0 0 1px #e5bcbc;
+}
+
+/* Teks Bagian Dalam Box */
+.input-inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-inner label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.input-inner input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Tombol Submit Rose Gold */
+.btn-signin {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7d7d;
+  color: #ffffff;
+  border: none;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.btn-signin:hover {
+  background-color: #870000;
+}
+
+.btn-signin:active {
+  transform: scale(0.99);
+}
+
+.login-photo {
+  flex:1.2;
+  position: relative;
+  display: block;
+}
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(229, 188, 188, 0.5);
+  border-radius: 30px;
+}
+/* Sisi Kanan: Tempat Kartu Login */
+.login-form-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fffafa;
+}
+.wallpaper-bg  {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+/* KOTAK LOGIN DENGAN EFEK BLUR KACA PREMUM */
+.login-card-glass {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 390px;
+  
+  /* KUNCI 1: Warna latar kotak putih transparan tipis */
+  background-color: rgba(255, 255, 255, 0.25); 
+  
+  /* KUNCI 2: Efek blur khusus untuk memburamkan bagian di dalam kotak saja */
+  backdrop-filter: blur(20px); 
+  -webkit-backdrop-filter: blur(20px); /* Untuk Safari/Apple */
+  
+  /* KUNCI 3: Garis tepi halus khas kaca */
+  border: 1px solid rgba(255, 255, 255, 0.4); 
+  
+  border-radius: 24px;
+  padding: 36px 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* RESPONSIVE: Jika dibuka di HP, sembunyikan foto kiri agar kotak login tetap center dan rapi */
+@media (max-width: 768px) {
+  .login-photo-side {
+    display: none;
+  }
+  .login-form-side {
+    flex: 1;
+    padding: 20px;
+  }
+}
